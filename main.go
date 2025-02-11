@@ -15,6 +15,11 @@ func main() {
             "message": "Hello, World! eta joss na !?? again!!",
         })
     })
+    router.GET("/second-route", func(c *gin.Context) {
+        c.JSON(http.StatusOK, gin.H{
+            "message": "Hello from the second route ok yes ",
+        })
+    })
 
     // Define another endpoint
     router.GET("/api/greet", func(c *gin.Context) {

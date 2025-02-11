@@ -9,3 +9,4 @@ services:
       - "8080:8080"
     tty: true
     stdin_open: true
+    command: air  # Run Air for hot-reloading

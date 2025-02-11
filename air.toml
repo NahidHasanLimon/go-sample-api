@@ -1,0 +1,29 @@
+# [Air](https://github.com/cosmtrek/air) configuration file
+
+[build]
+cmd = "go build -o ./tmp/main ."
+bin = "tmp/main"
+include_ext = ["go", "toml", "html"]
+exclude_dir = ["assets", "tmp", "vendor"]
+include_dir = []
+exclude_regex = []
+exclude_file = []
+exclude_unchanged = false
+follow_symlink = false
+log = "build-errors.log"
+delay = 1000 # ms
+stop_on_error = true
+send_interrupt = false
+kill_delay = 500 # ms
+
+[log]
+time = false
+
+[color]
+main = "magenta"
+watcher = "cyan"
+build = "yellow"
+runner = "green"
+
+[misc]
+clean_on_exit = true

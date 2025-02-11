@@ -1,0 +1,32 @@
+# Go build artifacts
+/bin/
+/pkg/
+*.exe
+*.out
+*.test
+
+# Go modules and dependencies
+go.sum
+go.mod
+
+# IDE/editor files
+.vscode/
+.idea/
+*.iml
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Logs and temp files
+*.log
+*.tmp
+
+# Air live-reloading config
+.air.toml
+
+# Docker files
+docker-compose.override.yml
+docker-compose.yml.lock
+node_modules/
+.env
