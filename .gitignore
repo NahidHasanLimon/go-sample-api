@@ -1,0 +1,10 @@
+# Ignore compiled Go binaries
+gin-bin
+tmp/
+*.out
+
+# Ignore dependency files
+go.sum
+
+# Ignore Docker-related files
+*.log
