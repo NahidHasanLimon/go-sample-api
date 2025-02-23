@@ -3,6 +3,7 @@ package main
 import (
     "github.com/gin-gonic/gin"
     "net/http"
+    "example.com/go-docker-app/cryptit" // Ensure this matches your module name
 )
 
 func main() {
@@ -12,16 +13,18 @@ func main() {
     // Define a "Hello, World!" endpoint
     router.GET("/", func(c *gin.Context) {
         c.JSON(http.StatusOK, gin.H{
-            "message": "Hello, World! eta joss na !?? again!!",
-        })
-    })
-    router.GET("/second-route", func(c *gin.Context) {
-        c.JSON(http.StatusOK, gin.H{
-            "message": "Hello from the second route ok yes ",
+            "message": cryptit.EncryptIt("hey Please Encrypt it"), // Updated to use the correct package
         })
     })
 
     // Define another endpoint
+    router.GET("/second-route", func(c *gin.Context) {
+        c.JSON(http.StatusOK, gin.H{
+            "message": "Hello from the second route ok yes ooo ",
+        })
+    })
+
+    // Define another API endpoint
     router.GET("/api/greet", func(c *gin.Context) {
         name := c.Query("name") // Get query parameter "name"
         if name == "" {
